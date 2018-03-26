@@ -1,0 +1,26 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.android.electracksih.Device_Fragment">
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        >
+ <LinearLayout
+     android:layout_width="match_parent"
+     android:layout_height="match_parent"
+     android:orientation="vertical">
+     <LinearLayout
+         android:layout_width=""
+         android:layout_height=""></LinearLayout>
+     
+     
+     
+ </LinearLayout>        
+        
+         
+    </ScrollView>
+    
+    
+</FrameLayout>
