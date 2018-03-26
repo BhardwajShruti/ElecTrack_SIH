@@ -27,10 +27,8 @@
             android:name=".Device_Fragment"
             android:label="@string/title_activity_device__fragment"
             android:theme="@style/AppTheme.NoActionBar" />
-        <activity
-            android:name=".humid_temp_card"
-            android:label="@string/title_activity_humid_temp_card"
-            android:theme="@style/AppTheme.NoActionBar"></activity>
     </application>
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
 
+    <uses-permission android:name="android.permission.INTERNET"/>
 </manifest>

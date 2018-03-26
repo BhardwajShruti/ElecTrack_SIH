@@ -13,9 +13,11 @@ import android.view.MenuItem;
 
 public class MainActivity extends AppCompatActivity {
     RecyclerView mRecyclerView;
+    RecyclerView mRecyclerView2;
     RecyclerView.Adapter mAdapter;
-
+    RecyclerView.Adapter mAdapter2;
     RecyclerView.LayoutManager mLayoutManager;
+    RecyclerView.LayoutManager mLayoutManager2;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -25,19 +27,23 @@ public class MainActivity extends AppCompatActivity {
         setSupportActionBar(toolbar);
 
         mRecyclerView = (RecyclerView) findViewById(R.id.device_recycler_view);
-
+        mRecyclerView2 = (RecyclerView) findViewById(R.id.temp_humid_recycler_view);
         // use this setting to improve performance if you know that changes
         // in content do not change the layout size of the RecyclerView
         mRecyclerView.setHasFixedSize(true);
+        mRecyclerView2.setHasFixedSize(true);
 
         // use a linear layout manager
         mLayoutManager = new LinearLayoutManager(this, LinearLayoutManager.HORIZONTAL, false);
         mRecyclerView.setLayoutManager(mLayoutManager);
 
+        mLayoutManager2 = new LinearLayoutManager(this, LinearLayoutManager.HORIZONTAL, false);
+        mRecyclerView2.setLayoutManager(mLayoutManager2);
         // specify an adapter (see also next example)
         mAdapter = new MyAdapter();
         mRecyclerView.setAdapter(mAdapter);
-
+        mAdapter2 = new MyAdapter2();
+        mRecyclerView2.setAdapter(mAdapter2);
 
 
         FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
