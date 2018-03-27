@@ -2,6 +2,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@drawable/backsih"
     tools:context="com.example.android.electracksih.Device_Fragment">
     <ScrollView
         android:layout_width="match_parent"
@@ -11,11 +12,31 @@
      android:layout_width="match_parent"
      android:layout_height="match_parent"
      android:orientation="vertical">
-     <LinearLayout
+
+     <Switch
+
          android:layout_width="match_parent"
-         android:layout_height="match_parent"></LinearLayout>
-     
-     
+         android:layout_height="wrap_content"
+         android:padding="10dp"
+         android:shadowColor="@color/colorAccent"
+         android:text="ON / OFF"
+         android:textColor="@android:color/white"
+         android:textSize="20dp"
+         android:textStyle="bold" />
+
+     <ImageView
+         android:layout_width="match_parent"
+         android:layout_height="287dp"
+         android:src="@drawable/graph_image" />
+
+     <android.support.v7.widget.RecyclerView
+         android:id="@+id/device_recycler_view_frag"
+         android:layout_width="match_parent"
+         android:layout_height="0dp"
+         android:padding="2dp"
+         android:layout_weight="3"
+         android:scrollbars="horizontal"
+         />
      
  </LinearLayout>        
         
