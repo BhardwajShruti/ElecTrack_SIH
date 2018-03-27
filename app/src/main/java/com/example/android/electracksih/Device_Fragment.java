@@ -28,7 +28,7 @@ public class Device_Fragment extends android.support.v4.app.Fragment {
 
         mRecyclerView = (RecyclerView) view.findViewById(R.id.device_recycler_view_frag);
         // in content do not change the layout size of the RecyclerView
-        mRecyclerView.setHasFixedSize(true);
+      //  mRecyclerView.setHasFixedSize(true);
 
         // use a linear layout manager
         mLayoutManager = new LinearLayoutManager(this.getActivity(), LinearLayoutManager.HORIZONTAL, false);
