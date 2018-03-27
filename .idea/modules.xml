@@ -2,8 +2,10 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/ElecTrackSIH.iml" filepath="$PROJECT_DIR$/ElecTrackSIH.iml" />
+      <module fileurl="file://C:\Users\NITANT SOOD\AndroidStudioProjects\ElecTrack_SIH\ElecTrackSIH.iml" filepath="C:\Users\NITANT SOOD\AndroidStudioProjects\ElecTrack_SIH\ElecTrackSIH.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/ElecTrack_SIH.iml" filepath="$PROJECT_DIR$/.idea/ElecTrack_SIH.iml" />
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
+      <module fileurl="file://C:\Users\NITANT SOOD\AndroidStudioProjects\ElecTrack_SIH\app\app.iml" filepath="C:\Users\NITANT SOOD\AndroidStudioProjects\ElecTrack_SIH\app\app.iml" />
     </modules>
   </component>
 </project>

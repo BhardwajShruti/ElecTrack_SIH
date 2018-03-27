@@ -15,33 +15,6 @@ public class Device_Detail extends AppCompatActivity {
   Device_Fragment dvFrame = null;
     private TextView mTextMessage;
 
-    private BottomNavigationView.OnNavigationItemSelectedListener mOnNavigationItemSelectedListener
-            = new BottomNavigationView.OnNavigationItemSelectedListener() {
-
-        @Override
-        public boolean onNavigationItemSelected(@NonNull MenuItem item) {
-            switch (item.getItemId()) {
-                case R.id.navigation_home:
-                { Log.i("abb","bba");
-                    dvFrame= new Device_Fragment();
-                    FragmentManager fm= getSupportFragmentManager();
-                    FragmentTransaction ft = fm.beginTransaction();
-//ft.detach(tvframe);
-
-                    ft.replace(R.id.container, dvFrame);
-                    ft.commit();
-                    Log.i("a","b");
-
-                }
-                case R.id.navigation_dashboard:
-
-                case R.id.navigation_notifications:
-
-            }
-            return false;
-        }
-    };
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -51,5 +24,35 @@ public class Device_Detail extends AppCompatActivity {
         BottomNavigationView navigation = (BottomNavigationView) findViewById(R.id.navigation);
         navigation.setOnNavigationItemSelectedListener(mOnNavigationItemSelectedListener);
     }
+
+    private BottomNavigationView.OnNavigationItemSelectedListener mOnNavigationItemSelectedListener
+            = new BottomNavigationView.OnNavigationItemSelectedListener() {
+
+        @Override
+        public boolean onNavigationItemSelected(@NonNull MenuItem item) {
+            switch (item.getItemId()) {
+
+                case R.id.navigation_home:
+                    { Log.i("abb","bba");
+                        dvFrame= new Device_Fragment();
+                        FragmentManager fm= getSupportFragmentManager();
+                        FragmentTransaction ft = fm.beginTransaction();
+//ft.detach(tvframe);
+
+                        ft.add(R.id.container, dvFrame);
+                        ft.commit();
+                        Log.i("a","b");
+                        break;
+                    }
+                case R.id.navigation_dashboard:
+
+                case R.id.navigation_notifications:
+
+            }
+            return true;
+        }
+    };
+
+
 
 }
