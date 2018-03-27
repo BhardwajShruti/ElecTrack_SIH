@@ -33,9 +33,25 @@ public class Device_Detail extends AppCompatActivity {
                     Log.i("a","b");
 
                 }
-                case R.id.navigation_dashboard:
+                case R.id.navigation_dashboard:{ Log.i("abb","bba");
+                    dvFrame= new Device_Fragment();
+                    FragmentManager fm= getSupportFragmentManager();
+                    FragmentTransaction ft = fm.beginTransaction();
+//ft.detach(tvframe);
 
-                case R.id.navigation_notifications:
+                    ft.replace(R.id.container, dvFrame);
+                    ft.commit();
+                    Log.i("a","b");}
+
+                case R.id.navigation_notifications:{ Log.i("abb","bba");
+                    dvFrame= new Device_Fragment();
+                    FragmentManager fm= getSupportFragmentManager();
+                    FragmentTransaction ft = fm.beginTransaction();
+//ft.detach(tvframe);
+
+                    ft.replace(R.id.container, dvFrame);
+                    ft.commit();
+                    Log.i("a","b");}
 
             }
             return false;

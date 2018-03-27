@@ -111,7 +111,32 @@ URL url;
 
             }
         });
+        holder.txtHeader.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent i = new Intent(context,Device_Detail.class);
+                int position = holder.getAdapterPosition();
+                i.putExtra("id",mDevice_ID[position]);
 
+
+
+                context.startActivity(i);
+
+            }
+        });
+        holder.roomHeader.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent i = new Intent(context,Device_Detail.class);
+                int position = holder.getAdapterPosition();
+                i.putExtra("id",mDevice_ID[position]);
+
+
+
+                context.startActivity(i);
+
+            }
+        });
     }
 
     // Return the size of your dataset (invoked by the layout manager)
