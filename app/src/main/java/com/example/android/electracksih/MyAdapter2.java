@@ -18,7 +18,7 @@ import java.net.URL;
 
 public class MyAdapter2 extends RecyclerView.Adapter<MyAdapter2.ViewHolder> {
     private String[] mDatasetHeader = {"Temperature","Humidity"};
-    private String[] mDatasetValue = {"21","41"};
+    private String[] mDatasetValue = {"17.5°","30"};
     private String[] mDatasetDesc = {"Cool","Humid"};
     private String[] mDatasetImage = {"",""};
             // Provide a reference to the views for each data item
