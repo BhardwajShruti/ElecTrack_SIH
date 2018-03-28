@@ -6,9 +6,12 @@ import android.support.design.widget.Snackbar;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
+import android.view.LayoutInflater;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
+
+import com.flipboard.bottomsheet.BottomSheetLayout;
 
 public class MainActivity extends AppCompatActivity {
     RecyclerView mRecyclerView;
@@ -44,13 +47,17 @@ public class MainActivity extends AppCompatActivity {
         mAdapter2 = new MyAdapter2();
         mRecyclerView2.setAdapter(mAdapter2);
 
+        final BottomSheetLayout bottomSheet = (BottomSheetLayout) findViewById(R.id.bottomsheet);
 
         FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
+
         fab.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
-                        .setAction("Action", null).show();
+//                Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
+//                        .setAction("Action", null).show();
+                bottomSheet.showWithSheetView(LayoutInflater.from(MainActivity.this).inflate(
+                        R.layout.chat_bot_bottom_sheet, bottomSheet, false));
             }
         });
     }
